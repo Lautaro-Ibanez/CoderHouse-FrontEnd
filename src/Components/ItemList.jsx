@@ -8,7 +8,7 @@ const ItemList = ({graficas}) => {
         <Item
           key={grafica.id}
           id={grafica.id}
-          title={grafica.name}
+          title={grafica.title}
           price={grafica.price}
           stock={grafica.stock}
           category={grafica.category}

@@ -1,4 +1,4 @@
-{ "Graficas" : [
+[
     {
         "id": "1",
         "title": "Nvidia RTX 3090",
@@ -91,4 +91,3 @@
         "stock": 21
     }
 ]
-}
