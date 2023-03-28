@@ -12,8 +12,8 @@
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	height: 100vh;
 	background-color: rgb(33, 33, 33);
+	min-height: 100vh;
 }
 
 .navBox {
@@ -164,4 +164,80 @@
 }
 .rightFooter {
 	width: 50%;
+}
+
+.rightFooter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.cartShopping {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.itemCartBox {
+	width: 80%;
+	height: 160px;
+	background-color: white;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.itemCartBox img {
+	width: 180px;
+	padding-left: 40px;
+}
+
+
+.footerShopping {
+	width: 80%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 90px;
+	background-color: white;
+	border-radius: 30px;
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+.formBox {
+	width: 80%;
+	border-radius: 30px;
+	background-color: white;
+	
+}
+
+.infoCompra {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	gap: 15px;
+	margin: 10px 0;
+}
+
+.titulosProductosCompra{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.titleYcantidad {
+	display: flex;
+	width: 60%;
+	justify-content: space-evenly;
 }
