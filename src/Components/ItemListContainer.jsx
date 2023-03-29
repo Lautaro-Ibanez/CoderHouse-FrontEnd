@@ -2,20 +2,32 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-import Placas from "../data.json";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 const ItemListContainer = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const db = getFirestore();
+
+    const itemsCollection = collection(db, "graficas");
+
+    getDocs(itemsCollection).then((res) =>
+      setProducts(
+        res.docs.map((product) => ({ id: product.id, ...product.data() }))
+      )
+    );
+  }, []);
+
   const { cat } = useParams();
-
-  const catFilter = Placas.filter(item => item.category === cat);
-
+  const catFilter = products.filter((item) => item.category === cat);
 
   return (
     <div className="box-itemList">
       {cat ? (
         <ItemList graficas={catFilter} />
       ) : (
-        <ItemList graficas={Placas} />
+        <ItemList graficas={products} />
       )}
     </div>
   );

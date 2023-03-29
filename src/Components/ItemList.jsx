@@ -1,6 +1,6 @@
 import Item from "./Item";
 
-const ItemList = ({graficas}) => {
+const ItemList = ({ graficas }) => {
   return (
     <div className="itemCardBox">
       {graficas?.map((grafica) => (
